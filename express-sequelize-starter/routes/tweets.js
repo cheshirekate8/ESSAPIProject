@@ -29,9 +29,10 @@ const tweetValidator = [
         .withMessage("Tweet too long.")
 ]
 
+
 router.get(
     "/",
-    asyncErrorHandler(async (req,res,next) => {
+    asyncErrorHandler(async (req,res, next) => {
         const allTweets = await Tweet.findAll();
         // res.send({ allTweets });
         res.json({ allTweets });
