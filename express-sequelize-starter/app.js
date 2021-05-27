@@ -11,10 +11,11 @@ app.use(cors({ origin: "http://localhost:4000" }));
 
 const indexRouter = require("./routes/index");
 const tweetRouter = require("./routes/tweets");
+const userRouter = require("./routes/user");
 
 app.use("/", indexRouter);
 app.use("/tweets", tweetRouter);
-
+app.use("/users", userRouter);
 
 
 // Catch unhandled requests and forward to error handler.
